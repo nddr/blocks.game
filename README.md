@@ -1,1 +1,1 @@
-# Blocks Javascript Game Client
+# Javascript Game (Blocks) Client
