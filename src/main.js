@@ -36,7 +36,8 @@ k.loadSprite('heroWalk', 'sprites/base_walk_strip8.png', {
 const hero = k.add([
   k.sprite('heroIdle'),
   k.pos(10, 50),
-  k.area({ offset: k.vec2(40, 25), scale: 0.25 }),
+  k.area({ scale: 0.15, offset: k.vec2(42, 28) }),
+  k.body(),
 ])
 
 hero.play('idle')
