@@ -1,5 +1,6 @@
 import kaplay from 'kaplay'
 import { loadMap } from './map.js'
+// import './socket.js'
 import './style.css'
 
 export const k = kaplay({
