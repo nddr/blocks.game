@@ -26,6 +26,13 @@ k.loadSprite('heroIdle', 'sprites/base_idle_strip9.png', {
   },
 })
 
+k.loadSprite('heroHairIdle', 'sprites/shorthair_idle_strip9.png', {
+  sliceX: 9,
+  anims: {
+    idle: { from: 0, to: 8, time: 0.1, loop: true },
+  },
+})
+
 k.loadSprite('heroWalk', 'sprites/base_walk_strip8.png', {
   sliceX: 8,
   anims: {
@@ -40,10 +47,14 @@ const hero = k.add([
   k.body(),
 ])
 
+const heroHair = hero.add([k.sprite('heroHairIdle')])
+
 hero.play('idle')
+heroHair.play('idle')
 
 k.onKeyDown('left', () => {
   hero.flipX = true
+  heroHair.flipX = true
   currentFlip = true
 
   hero.move(-MOVE_SPEED, 0)
@@ -51,6 +62,7 @@ k.onKeyDown('left', () => {
 
 k.onKeyDown('right', () => {
   hero.flipX = false
+  heroHair.flipX = false
   currentFlip = false
 
   hero.move(MOVE_SPEED, 0)
@@ -78,19 +90,25 @@ k.onKeyPress('right', () => {
 
 k.onKeyRelease('left', () => {
   hero.use(k.sprite('heroIdle'))
+  heroHair.use(k.sprite('heroHairIdle'))
   hero.play('idle')
+  heroHair.play('idle')
   currentSprite = 'idle'
 
   hero.flipX = true
+  heroHair.flipX = true
   currentFlip = true
 })
 
 k.onKeyRelease('right', () => {
   hero.use(k.sprite('heroIdle'))
+  heroHair.use(k.sprite('heroHairIdle'))
   hero.play('idle')
+  heroHair.play('idle')
   currentSprite = 'idle'
 
   hero.flipX = false
+  heroHair.flipX = false
   currentFlip = false
 })
 
