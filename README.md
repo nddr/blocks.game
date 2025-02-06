@@ -1,4 +1,4 @@
-# Javascript Game (Blocks) Client
+# Javascript Game (mpgoga) Client
 
 ### Libraries
 
@@ -8,3 +8,6 @@
 ### Development
 - npm i
 - npm run dev
+
+### Production
+https://mpgoga.netlify.app
