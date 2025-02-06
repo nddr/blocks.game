@@ -12,6 +12,7 @@ export const k = kaplay({
 
 const TICK_RATE = 15
 const MOVE_SPEED = 30
+const SPRINT_SPEED = 60
 let currentFlip = false
 let currentSprite = 'idle'
 const players = {}
