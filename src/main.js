@@ -10,7 +10,6 @@ export const k = kaplay({
   global: false,
 })
 
-const TICK_RATE = 15
 const MOVE_SPEED = 30
 const SPRINT_SPEED = 60
 let currentFlip = false
@@ -113,15 +112,3 @@ k.onKeyRelease('right', () => {
   heroHair.flipX = false
   currentFlip = false
 })
-
-setInterval(() => {
-  // socket.emit('client:match:update', {
-  //   matchId,
-  //   x: hero.pos.x.toFixed(0),
-  //   y: hero.pos.y.toFixed(0),
-  //   sprite: currentSprite,
-  //   anim: hero.curAnim(),
-  //   flip: hero.flipX,
-  //   username: players[socket.id].username,
-  // })
-}, TICK_RATE)
